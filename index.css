@@ -24,6 +24,12 @@ body {
   animation-timing-function: ease-in-out;
 }
 
+@keyframes colorcycle {
+  0% {color: #ffffff;}
+  10% {color: #000000;}
+
+}
+
 @keyframes dotfade {
   0% {opacity: 0;}
   50% {opacity: 1;}
@@ -50,6 +56,12 @@ body {
   padding-right: 10vw;
   width: 22.5vw;
   line-height: 2.8vw;
+}
+
+#center {
+  animation-name: colorcycle;
+  animation-duration: .1s;
+  animation-iteration-count: infinite;
 }
 
 #upper-left {

@@ -20,7 +20,7 @@ $(document).ready(function() {
 
     $('div#lower-left').html(time.getMilliseconds());
     $('body').css('backgroundColor', randomColor(colors));
-  }, 63);
+  }, 33);
 
   setInterval(function() {
     $('div#upper-left').html(time.getHours() % 12 || 12);
@@ -31,10 +31,10 @@ $(document).ready(function() {
   let i = 0
   setInterval(function() {
     if (i % 10 == 0) {
-      $('div#center').append('<span class="dot">\n.</span>');
+      $('div#center').append('<span class="dot boop">\n.</span>');
       i++;
     } else if (i < 59) {
-      $('div#center').append('<span class="dot">.</span>');
+      $('div#center').append('<span class="dot boop">.</span>');
       i++;
     } else {
       i = 0;
