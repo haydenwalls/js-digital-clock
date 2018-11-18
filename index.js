@@ -20,7 +20,7 @@ $(document).ready(function() {
 
     $('div#lower-left').html(time.getMilliseconds());
     $('body').css('backgroundColor', randomColor(colors));
-  }, 63);
+  }, 3);
 
   setInterval(function() {
     $('div#upper-left').html(time.getHours() % 12 || 12);
