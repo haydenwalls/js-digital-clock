@@ -27,7 +27,6 @@ body {
 @keyframes colorcycle {
   0% {color: #ffffff;}
   10% {color: #000000;}
-
 }
 
 @keyframes dotfade {
@@ -56,6 +55,7 @@ body {
   padding-right: 10vw;
   width: 22.5vw;
   line-height: 2.8vw;
+  font-family: "Times New Roman";
 }
 
 #center {
