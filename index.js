@@ -28,13 +28,14 @@ $(document).ready(function() {
     $('div#lower-right').html(time.getSeconds());
   }, 1000);
 
+
   let i = 0
   setInterval(function() {
     if (i % 10 == 0) {
-      $('div#center').append('<span class="dot boop">\n.</span>');
+      $('div#center').append('<span class="dot">\n.</span>');
       i++;
     } else if (i < 59) {
-      $('div#center').append('<span class="dot boop">.</span>');
+      $('div#center').append('<span class="dot">.</span>');
       i++;
     } else {
       i = 0;
