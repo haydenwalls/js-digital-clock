@@ -1,5 +1,76 @@
+html {
+  height: 100%;
+}
+
 body {
-    background-color: #80d4ea;
+  height: 100%;
+  margin: 0 4vw 0 4vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  font-size: 10vw;
+  font-family: Helvetica;
+  color: white;
+  text-shadow: 1px 10px 20px white,
+  -8px -8px 30px white,
+  10px 1px 20px white,
+  0px 0px 50px white;
+}
+
+.dot {
+  animation-name: dotfade;
+  animation-duration: 5s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes dotfade {
+  0% {opacity: 0;}
+  50% {opacity: 1;}
+  100% {opacity: 0;}
+}
+
+.top {
+  padding-top: 2vw;
+  display: flex;
+  justify-content: space-between;
+}
+
+.bottom {
+  padding-bottom: 2vw;
+  display: flex;
+  justify-content: space-between;
+}
+
+#center {
+  margin-top: 0vw;
+  height: 25vw;
+  margin-left: auto;
+  margin-right: auto;
+  padding-right: 10vw;
+  width: 22.5vw;
+  line-height: 2.8vw;
+}
+
+#upper-left {
+  float: left;
+  top: 0;
+}
+
+#upper-right {
+  float: right;
+  top: 0;
+}
+
+#lower-right {
+  display: block;
+  float: right;
+  vertical-align: bottom;
+}
+
+#lower-left {
+  float: left;
+  bottom: 0;
 }
 
 #clock {
