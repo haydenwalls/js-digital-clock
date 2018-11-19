@@ -33,7 +33,7 @@ body {
 @keyframes dotfade {
   0% {opacity: 0;}
   50% {opacity: 1;}
-  100% {opacity: 0;}
+  100% {opacity: .3;}
 }
 
 .top {
@@ -49,11 +49,11 @@ body {
 }
 
 #center {
-  margin-top: 0vw;
+  margin-top: 2vw;
   height: 25vw;
   margin-left: auto;
   margin-right: auto;
-  padding-right: 6vw;
+  padding-right: 8.5vw;
   width: 22.5vw;
   line-height: 2.8vw;
   font-family: "Times New Roman";
