@@ -15,12 +15,53 @@ $(document).ready(function() {
   $('div#lower-left').html(time.getMilliseconds());
   // $('div#lower-left').css('color', randomColor(colors));
 
+
   setInterval(() => {
     time = new Date;
 
     $('div#lower-left').html(time.getMilliseconds());
-    $('body').css('backgroundColor', randomColor(colors));
   }, 33);
+
+  const pizza = setInterval(() => {
+    $('body').css('backgroundColor', randomColor(colors));
+  }, 50);
+
+  let texterval, colorval;
+
+  $('body').on('mousedown', function() {
+    clearInterval(colorval);
+    clearInterval(pizza);
+    $('body').css('backgroundColor', 'white');
+    texterval = setInterval(() => {
+      $('.top').css('color', randomColor(colors));
+      $('.top').css('textShadow', `1px 10px 20px ${randomColor(colors)},
+      -8px -8px 30px ${randomColor(colors)},
+      10px 1px 20px ${randomColor(colors)},
+      0px 0px 50px ${randomColor(colors)}`)
+      $('.bottom').css('color', randomColor(colors));
+      $('.bottom').css('textShadow', `1px 10px 20px ${randomColor(colors)},
+      -8px -8px 30px ${randomColor(colors)},
+      10px 1px 20px ${randomColor(colors)},
+      0px 0px 50px ${randomColor(colors)}`)
+    }, 50);
+  });
+
+  $('body').on('mouseup', function() {
+    clearInterval(texterval);
+    $('.top').css('color', 'white');
+    $('.bottom').css('color', 'white');
+    colorval = setInterval(() => {
+      $('body').css('backgroundColor', randomColor(colors));
+      $('.top').css('textShadow', `1px 10px 20px white,
+      -8px -8px 30px white,
+      10px 1px 20px white,
+      0px 0px 50px white`);
+      $('.bottom').css('textShadow', `1px 10px 20px white,
+      -8px -8px 30px white,
+      10px 1px 20px white,
+      0px 0px 50px white`);
+    }, 50);
+  });
 
   setInterval(function() {
     $('div#upper-left').html(time.getHours() % 12 || 12);
